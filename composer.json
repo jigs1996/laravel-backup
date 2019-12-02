@@ -51,7 +51,7 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test": "vendor\\bin\\phpunit"
     },
     "suggest": {
         "laravel/slack-notification-channel": "Required for sending notifications via Slack"

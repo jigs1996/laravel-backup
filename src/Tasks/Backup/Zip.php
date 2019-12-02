@@ -101,7 +101,7 @@ class Zip
 
         foreach ($files as $file) {
             if (file_exists($file)) {
-                $this->zipFile->addFile($file, ltrim($nameInZip, DIRECTORY_SEPARATOR)).PHP_EOL;
+                $this->zipFile->addFile($file, str_replace( base_path(),'' , ltrim(str_replace( base_path(),'' , ltrim($nameInZip, DIRECTORY_SEPARATOR)),DIRECTORY_SEPARATOR))).PHP_EOL;
             }
             $this->fileCount++;
         }
